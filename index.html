@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#21122e">
+<meta name="description" content="Diseña tu invitación digital y cotiza las funciones que quieres para tu celebración.">
+<title>Cotiza tu invitación | Eventos Digitales MX</title>
+<link rel="icon" href="logo.webp">
+<link rel="stylesheet" href="estilos.css">
+<script defer src="config.js"></script>
+<script defer src="catalogo.js"></script>
+<script defer src="cotizador.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al cotizador</a>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="./" aria-label="Eventos Digitales MX, inicio">
+      <img src="logo.webp" width="42" height="36" alt="">
+      <span>Eventos<br>Digitales <em>MX</em></span>
+    </a>
+    <span class="tagline">Tú lo imaginas. Nosotros lo programamos.</span>
+    <button class="quiet" type="button" data-privacy>Aviso de privacidad</button>
+  </div>
+</header>
+<main class="shell" id="contenido">
+  <div class="walk">
+    <div class="stage-status"><span class="eyebrow">Diseña tu invitación</span><span id="stage-number"></span></div>
+    <nav id="steps" aria-label="Etapas del cotizador"></nav>
+    <section id="screen" aria-labelledby="stage-title"></section>
+    <div class="navigation">
+      <button id="back" class="quiet" type="button">Atrás</button>
+      <button id="next" class="primary" type="button">Continuar</button>
+    </div>
+    <footer class="local"><span id="saved">Tu avance se guarda en este dispositivo.</span><button class="quiet" type="button" data-reset>Borrar avance</button></footer>
+  </div>
+  <aside class="estimate">
+    <div class="estimate-art"><img src="invitacion.webp" width="830" height="682" alt="Ejemplo de una invitación digital de boda en un teléfono"></div>
+    <div class="estimate-body">
+      <p class="estimate-label">Tu invitación</p>
+      <div id="price" aria-live="polite"></div>
+      <p class="estimate-note">Precio estimado sujeto a revisión de tu solicitud.</p>
+    </div>
+    <div class="estimate-caption"><span aria-hidden="true">✧</span><span>Un diseño pensado para tu celebración.</span></div>
+  </aside>
+</main>
+<dialog id="privacy">
+  <div id="privacy-text"></div>
+  <form method="dialog"><button class="primary">Cerrar aviso</button></form>
+</dialog>
+<dialog id="reset-dialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">¿Borrar el avance?</h2>
+  <p>Se quitarán las selecciones, los datos y las vistas previas de este dispositivo.</p>
+  <form class="actions" method="dialog">
+    <button class="secondary" value="cancel" autofocus>Conservar avance</button>
+    <button class="primary" value="reset">Borrar avance</button>
+  </form>
+</dialog>
+<div id="toast" role="status"></div>
+</body>
+</html>
